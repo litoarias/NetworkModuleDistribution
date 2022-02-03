@@ -7,11 +7,16 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "NetworkModule", 
+            name: "NetworkModule",
             targets: ["NetworkModule"])
+    ],
+    dependencies: [
+        // Here we define our package's external dependencies
+        // and from where they can be fetched:
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.5.0"))
     ],
     targets: [
         .binaryTarget(
-            name: "NetworkModule", 
+            name: "NetworkModule",
             path: "NetworkModule.xcframework")
     ])
