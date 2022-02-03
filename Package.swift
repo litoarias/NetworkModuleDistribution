@@ -15,9 +15,9 @@ let package = Package(
             targets: ["Alamofire"]
         )
     ],
-    dependencies: [
-        .package(name: "Alamofire", path: "Alamofire.xcframework")
-    ],
+//    dependencies: [
+//        .package(name: "Alamofire", path: "Alamofire.xcframework")
+//    ],
     targets: [
         .binaryTarget(
             name: "NetworkModule",
