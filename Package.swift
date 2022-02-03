@@ -16,7 +16,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "../../Alamofire")
+        .package(name: "Alamofire", path: "Alamofire.xcframework")
     ],
     targets: [
         .binaryTarget(
