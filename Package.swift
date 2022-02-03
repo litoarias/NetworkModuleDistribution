@@ -9,19 +9,23 @@ let package = Package(
         .library(
             name: "NetworkModule",
             targets: ["NetworkModule"]
-        ),
-        .library(
-            name: "Alamofire",
-            targets: ["Alamofire"]
         )
+//        .library(
+//            name: "Alamofire",
+//            targets: ["Alamofire"]
+//        )
+    ],
+    dependencies: [
+        .package(path: "../Alamofire")
+        // Dependencies declare other packages that this package depends on.
     ],
     targets: [
         .binaryTarget(
             name: "NetworkModule",
             path: "NetworkModule.xcframework"
-        ),
-        .binaryTarget(
-            name: "Alamofire",
-            path: "Alamofire.xcframework"
         )
+//        .binaryTarget(
+//            name: "Alamofire",
+//            path: "Alamofire.xcframework"
+//        )
     ])
