@@ -16,7 +16,7 @@ let package = Package(
 //        )
     ],
     dependencies: [
-        .package(path: "../Alamofire")
+        .package(path: "Alamofire")
         // Dependencies declare other packages that this package depends on.
     ],
     targets: [
