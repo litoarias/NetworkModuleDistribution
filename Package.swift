@@ -16,7 +16,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(path: "Alamofire")
+        .package(path: "../Alamofire")
     ],
     targets: [
         .binaryTarget(
