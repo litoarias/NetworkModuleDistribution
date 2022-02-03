@@ -9,6 +9,10 @@ let package = Package(
         .library(
             name: "NetworkModule",
             targets: ["NetworkModule"]
+        ),
+        .library(
+            name: "Alamofire",
+            targets: ["Alamofire"]
         )
     ],
     targets: [
