@@ -18,6 +18,9 @@ let package = Package(
             targets: ["Alamofire"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.5.0"))
+    ],
     //    dependencies: [
     //        .package(name: "Alamofire", path: "Sources/NetworkModuleDistribution/Alamofire.xcframework")
     //    ],
