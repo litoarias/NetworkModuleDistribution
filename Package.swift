@@ -6,29 +6,29 @@ import PackageDescription
 let package = Package(
     name: "NetworkModule",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
         .library(
             name: "NetworkModule",
             targets: ["NetworkModule"]
+        ),
+        .library(
+            name: "Alamofire",
+            targets: ["Alamofire"]
         )
-//        .library(
-//            name: "Alamofire",
-//            targets: ["Alamofire"]
-//        )
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-    ],
+    //    dependencies: [
+    //        .package(name: "Alamofire", path: "Sources/NetworkModuleDistribution/Alamofire.xcframework")
+    //    ],
     targets: [
         .binaryTarget(
             name: "NetworkModule",
             path: "Sources/NetworkModuleDistribution/NetworkModule.xcframework"
+        ),
+        .binaryTarget(
+            name: "Alamofire",
+            path: "Sources/NetworkModuleDistribution/Alamofire.xcframework"
         )
-//        .binaryTarget(
-//            name: "Alamofire",
-//            path: "Sources/NetworkModuleDistribution/Alamofire.xcframework"
-//        )
     ]
 )
