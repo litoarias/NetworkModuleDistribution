@@ -18,7 +18,7 @@ NEW_VERSION=$1
 FRAMEWORK_NAME=$2
 echo $NEW_VERSION
 echo $FRAMEWORK_NAME
-echo "...."
+echo "curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip...."
 # download new zip file
 curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip
 # calculate new checksum
