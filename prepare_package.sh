@@ -35,5 +35,9 @@ sed -E -i '' 's/checksum: ".+"/checksum: "'$NEW_CHECKSUM\"/ Package.swift
 cat Package.swift
 # delete downloaded zip file
 rm $FRAMEWORK_NAME.xcframework.zip
+#git commit and push
+git add . 
+git commit -m "New $FRAMEWORK_NAME version $NEW_VERSION"
+git push -u origin master 
 # Releasing the new version
-gh release create "v$framework_version" --generate-notes
+gh release create "$NEW_VERSION" --generate-notes
