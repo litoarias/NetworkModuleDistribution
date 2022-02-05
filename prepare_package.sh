@@ -38,6 +38,6 @@ rm $FRAMEWORK_NAME.xcframework.zip
 #git commit and push
 git add . 
 git commit -m "New $FRAMEWORK_NAME version $NEW_VERSION"
-git push -u origin master 
+git push
 # Releasing the new version
 gh release create "$NEW_VERSION" --generate-notes
