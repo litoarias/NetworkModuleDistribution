@@ -16,8 +16,8 @@ fi
 # take version (e.g. 1.8.1) as argument
 NEW_VERSION=$1
 FRAMEWORK_NAME=$2
-echo NEW_VERSION
-echo FRAMEWORK_NAME
+echo $NEW_VERSION
+echo $FRAMEWORK_NAME
 echo "...."
 # download new zip file
 curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip
