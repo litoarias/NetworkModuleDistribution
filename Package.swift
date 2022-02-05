@@ -3,35 +3,25 @@
 
 import PackageDescription
 
+let version = "0.0.3"
+let moduleName = "NetworkModule"
+
 let package = Package(
-    name: "NetworkModule",
+    name: moduleName,
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13) //, .macCatalyst(.v15), .macOS(.v10_15)
     ],
     products: [
         .library(
-            name: "NetworkModule",
-            targets: ["NetworkModule"]
-        ),
-        .library(
-            name: "Alamofire",
-            targets: ["Alamofire"]
+            name: moduleName,
+            targets: [moduleName]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.5.0"))
-    ],
-    //    dependencies: [
-    //        .package(name: "Alamofire", path: "Sources/NetworkModuleDistribution/Alamofire.xcframework")
-    //    ],
     targets: [
         .binaryTarget(
-            name: "NetworkModule",
-            path: "Sources/NetworkModuleDistribution/NetworkModule.xcframework"
-        ),
-        .binaryTarget(
-            name: "Alamofire",
-            path: "Sources/NetworkModuleDistribution/Alamofire.xcframework"
+            name: moduleName,
+            url: "https://github.com/litoarias/NetworkModule/releases/download/\(version)/\(moduleName).xcframework.zip",
+            checksum: "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
         )
     ]
 )
