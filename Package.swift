@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: moduleName,
-            url: "https://github.com/litoarias/NetworkModule/releases/download/\(version)/\(moduleName).xcframework.zip",
+            url: "https://github.com/litoarias/NetworkModuleDistribution/releases/download/\(version)/\(moduleName).xcframework.zip",
             checksum: "44cc7533a31db7cf5e4a01e416e3978fc8b67fa049cf6b2c36564a5988fc85c3"
         )
     ]
