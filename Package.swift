@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: moduleName,
             url: "https://github.com/litoarias/NetworkModule/releases/download/\(version)/\(moduleName).xcframework.zip",
-            checksum: "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+            checksum: "ac7d9fe7f1b0f79c65e9f0b3a1c4e2fdc2bc1ce5019922e776cb2c93d028fcc2"
         )
     ]
 )
