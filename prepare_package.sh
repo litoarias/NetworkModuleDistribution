@@ -16,14 +16,17 @@ fi
 # take version (e.g. 1.8.1) as argument
 NEW_VERSION=$1
 FRAMEWORK_NAME=$2
+NEW_CHECKSUM=$3
 echo $NEW_VERSION
 echo $FRAMEWORK_NAME
-echo "curl -H 'Cache-Control: no-cache' -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip"
+echo $NEW_CHECKSUM
+
+# echo "curl -H 'Cache-Control: no-cache' -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip"
 # download new zip file
-curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip -H "Cache-Control: no-cache, no-store, must-revalidate" -H "Pragma: no-cache" -H "Expires: 0"
+# curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip -H "Cache-Control: no-cache, no-store, must-revalidate" -H "Pragma: no-cache" -H "Expires: 0"
 
 # calculate new checksum
-NEW_CHECKSUM=$(swift package compute-checksum $FRAMEWORK_NAME.xcframework.zip)
+# NEW_CHECKSUM=$(swift package compute-checksum $FRAMEWORK_NAME.xcframework.zip)
 # print out new shasum for convenience reasons
 echo "New checksum is $NEW_CHECKSUM"
 # replace name module information in package manifest
