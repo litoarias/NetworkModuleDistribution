@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "0.0.4"
+let version = "0.0.5"
 let moduleName = "NetworkModule"
 
 let package = Package(
