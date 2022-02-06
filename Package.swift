@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "2.0.0"
+let version = "3.0.0"
 let moduleName = "NetworkModule"
 
 let package = Package(
@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: moduleName,
             url: "https://github.com/litoarias/NetworkModule/releases/download/\(version)/\(moduleName).xcframework.zip",
-            checksum: "d23d358e4568d3327eae86224049f2a86e93cd219abafb5bf06d838973fa6b5f"
+            checksum: "1d29c3d6cb8d4d5173dc4ed6710ef6de661df85730cd7f420cfef2ffdabb41b1"
         )
     ]
 )
