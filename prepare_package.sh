@@ -9,7 +9,7 @@ NEW_VERSION=$1
 FRAMEWORK_NAME=$2
 
 echo "download new zip file"
-curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip --silent
+# curl -L -O https://github.com/litoarias/NetworkModule/releases/download/$NEW_VERSION/$FRAMEWORK_NAME.xcframework.zip --silent
 echo "calculate new checksum"
 NEW_CHECKSUM=$(swift package compute-checksum $FRAMEWORK_NAME.xcframework.zip)
 echo "print out new shasum for convenience reasons"
