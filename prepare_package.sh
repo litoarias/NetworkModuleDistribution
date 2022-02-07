@@ -18,7 +18,7 @@ sed -E -i '' 's/let moduleName = ".+"/let moduleName = "'$FRAMEWORK_NAME\"/ Pack
 echo "replace version information in package manifest"
 sed -E -i '' 's/let version = ".+"/let version = "'$NEW_VERSION\"/ Package.swift
 echo "replace checksum information in package manifest"
-sed -E -i '' 's/checksum: ".+"/checksum: "'$NEW_CHECKSUM\"/ Package.swift
+sed -E -i '' 's/let checksum = ".+"/let checksum = "'$NEW_CHECKSUM\"/ Package.swift
 echo "print out package manifes for convenience reasons"
 cat Package.swift
 echo "git commit all without framework and push"
